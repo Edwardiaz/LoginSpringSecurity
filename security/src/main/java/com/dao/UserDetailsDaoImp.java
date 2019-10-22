@@ -16,6 +16,6 @@ public class UserDetailsDaoImp implements UserDetailsDao {
 	@Override
 	public User findUserByUsername(String username) {
 		
-		return sessionFactory.getCurrentSession().get(User.class,username);
+		return sessionFactory.getCurrentSession().get(User.class, username);
 	}
 }

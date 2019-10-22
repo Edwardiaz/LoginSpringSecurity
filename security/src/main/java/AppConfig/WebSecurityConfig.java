@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.and()
 		.formLogin().loginPage("/login").loginProcessingUrl("/loginAction").permitAll()
 		.and()
-		.logout().logoutSuccessUrl("/login").permitAll()
+		.logout().logoutSuccessUrl("/login").permitAll().invalidateHttpSession(true)
 		.and()
 		.csrf().disable();
 	}
